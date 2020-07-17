@@ -1,0 +1,117 @@
+body {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+    background-color: #f2f1df;
+    font-family: 'Comfortaa', cursive;
+    padding: 0px 12px 12px 12px;
+  }
+  
+  header {
+    display: flex;
+    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+    justify-content: center;
+    background: #f2f1df;
+    color: #010a26;
+    border: 1px solid #f2f1df;
+    min-height: 10vh;
+    text-align: center;
+  }
+  hr {
+    color: #91d9bf;
+  }
+  
+  ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1em;
+    margin: 0 auto;
+    max-width: 64em;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-left: 0;
+    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+  }
+  
+  ul.weekdays {
+    margin-bottom: 1em;
+  }
+  
+  ul.weekdays li {
+    height: 4vw;
+  }
+  
+  ul.day-grid li {
+    background-color: #91d9bf;
+    border: 1px solid #91d9bf;
+    border-radius: 5px;
+    box-shadow: 0 6px 6px -6px #378c7d;
+    color: #f2f1df;
+    height: 12vw;
+    max-height: 125px;
+  }
+  
+  ul.day-grid li:hover {
+    background-color: #388992;
+    border: #378c7d;
+    box-shadow: 0 4px 6px -6px #010a26;
+    color: #f2f1df;
+    transition: ease-in-out 0.9s;
+  }
+  
+  ul.weekdays abbr[title] {
+    border: none;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 12px;
+  }
+
+  ul.weekdays abbr[title]:hover{
+      background-color: #010a26;
+      color: #f2f1df;
+      border-radius: 5px;
+      transition: 0.5s;
+  }
+  
+  .month-prev, .month-next {
+    background-color: #010a26 !important;
+    color: #f2f1df !important;
+    border: #010a26 !important;
+  }
+
+  .month-prev:hover{
+      background-color: #f2f1df !important;
+      color: #010a26 !important;
+      border-left: 5px solid #010a26 !important;
+      transition: ease-in 0.5s !important;
+  }
+  .month-next:hover{
+    background-color: #f2f1df !important;
+    color: #010a26 !important;
+    border-left: 5px solid #010a26 !important; 
+    transition: ease-in 0.5s !important;
+  }
+  
+  @media all and (max-width: 800px) {
+    ul {
+      grid-gap: 0.25em;
+    }
+  
+    ul.weekdays li {
+      font-size: 0;
+    }
+  
+    ul.weekdays > li abbr:after {
+      content: attr(title);
+      font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+      text-align: center;
+    }
+  }
+  
